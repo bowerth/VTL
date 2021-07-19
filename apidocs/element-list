@@ -12,6 +12,8 @@ it.bancaditalia.oss.vtl.impl.engine.statement
 it.bancaditalia.oss.vtl.impl.environment
 it.bancaditalia.oss.vtl.impl.environment.dataset
 it.bancaditalia.oss.vtl.impl.environment.exceptions
+it.bancaditalia.oss.vtl.impl.environment.spark
+it.bancaditalia.oss.vtl.impl.environment.util
 it.bancaditalia.oss.vtl.impl.session
 it.bancaditalia.oss.vtl.impl.session.exceptions
 it.bancaditalia.oss.vtl.impl.transform
@@ -31,10 +33,12 @@ it.bancaditalia.oss.vtl.impl.types.data.date
 it.bancaditalia.oss.vtl.impl.types.dataset
 it.bancaditalia.oss.vtl.impl.types.domain
 it.bancaditalia.oss.vtl.impl.types.exceptions
+it.bancaditalia.oss.vtl.impl.types.lineage
 it.bancaditalia.oss.vtl.impl.types.operators
 it.bancaditalia.oss.vtl.model.data
 it.bancaditalia.oss.vtl.model.domain
 it.bancaditalia.oss.vtl.model.transform
+it.bancaditalia.oss.vtl.model.transform.analytic
 it.bancaditalia.oss.vtl.session
 it.bancaditalia.oss.vtl.spring.rest
 it.bancaditalia.oss.vtl.spring.rest.exception

@@ -2,7 +2,6 @@ it.bancaditalia.oss.vtl.config
 it.bancaditalia.oss.vtl.engine
 it.bancaditalia.oss.vtl.environment
 it.bancaditalia.oss.vtl.exceptions
-it.bancaditalia.oss.vtl.impl.cli
 it.bancaditalia.oss.vtl.impl.config
 it.bancaditalia.oss.vtl.impl.domains
 it.bancaditalia.oss.vtl.impl.engine

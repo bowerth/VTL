@@ -52,27 +52,27 @@ import it.bancaditalia.oss.vtl.spring.rest.result.UUIDBean;
 @RestController
 @SpringBootApplication
 @Configuration
-<span class="nc" id="L55">public class VTLRESTfulServices extends SpringBootServletInitializer</span>
+<span class="fc" id="L55">public class VTLRESTfulServices extends SpringBootServletInitializer</span>
 {
 	@Autowired private VTLSessionManager manager;
 	
 	@PostMapping(path = &quot;/compile&quot;, params = &quot;code&quot;)
 	public @NonNull UUIDBean compile(@RequestParam @NonNull String code) 
 	{
-<span class="nc" id="L62">		UUID uuid = manager.createSession();</span>
-<span class="nc" id="L63">		VTLSession session = manager.getSession(uuid);</span>
-<span class="nc" id="L64">		session.addStatements(code);</span>
-<span class="nc" id="L65">		session.compile();</span>
-<span class="nc" id="L66">		return new UUIDBean(uuid);</span>
+<span class="fc" id="L62">		UUID uuid = manager.createSession();</span>
+<span class="fc" id="L63">		VTLSession session = manager.getSession(uuid);</span>
+<span class="fc" id="L64">		session.addStatements(code);</span>
+<span class="fc" id="L65">		session.compile();</span>
+<span class="fc" id="L66">		return new UUIDBean(uuid);</span>
 	}
 
 	@GetMapping(&quot;/resolve&quot;)
 	public @NonNull ResultBean resolve(@RequestParam @NonNull UUID uuid, @RequestParam @NonNull String alias) 
 	{
-<span class="nc" id="L72">		VTLSession session = manager.getSession(uuid);</span>
-<span class="nc" id="L73">		VTLValue value = session.resolve(alias);</span>
-<span class="nc bnc" id="L74" title="All 2 branches missed.">		if (value instanceof ScalarValue)</span>
-<span class="nc" id="L75">			return new ScalarResultBean((ScalarValue&lt;?, ?, ?&gt;) value);</span>
+<span class="fc" id="L72">		VTLSession session = manager.getSession(uuid);</span>
+<span class="fc" id="L73">		VTLValue value = session.resolve(alias);</span>
+<span class="pc bpc" id="L74" title="1 of 2 branches missed.">		if (value instanceof ScalarValue)</span>
+<span class="fc" id="L75">			return new ScalarResultBean((ScalarValue&lt;?, ?, ?, ?&gt;) value);</span>
 		else
 <span class="nc" id="L77">			return new DataSetResultBean((DataSet) value);</span>
 	}
@@ -80,13 +80,13 @@ import it.bancaditalia.oss.vtl.spring.rest.result.UUIDBean;
 	@GetMapping(&quot;/metadata&quot;)
 	public @NonNull List&lt;DomainBean&gt; getMetadata(@RequestParam @NonNull UUID uuid, @RequestParam @NonNull String alias) 
 	{
-<span class="nc bnc" id="L83" title="All 2 branches missed.">		if (!manager.containsSession(uuid))</span>
+<span class="pc bpc" id="L83" title="1 of 2 branches missed.">		if (!manager.containsSession(uuid))</span>
 <span class="nc" id="L84">			throw new VTLInvalidSessionException(uuid); </span>
 			
-<span class="nc" id="L86">		VTLSession session = manager.getSession(uuid);</span>
-<span class="nc" id="L87">		VTLValueMetadata value = session.getMetadata(alias);</span>
-<span class="nc bnc" id="L88" title="All 2 branches missed.">		if (value instanceof ScalarValueMetadata)</span>
-<span class="nc" id="L89">			return singletonList(new DomainBean(((ScalarValueMetadata&lt;?&gt;) value).getDomain()));</span>
+<span class="fc" id="L86">		VTLSession session = manager.getSession(uuid);</span>
+<span class="fc" id="L87">		VTLValueMetadata value = session.getMetadata(alias);</span>
+<span class="pc bpc" id="L88" title="1 of 2 branches missed.">		if (value instanceof ScalarValueMetadata)</span>
+<span class="fc" id="L89">			return singletonList(new DomainBean(((ScalarValueMetadata&lt;?, ?&gt;) value).getDomain()));</span>
 		else
 <span class="nc" id="L91">			return ((DataSetMetadata) value).stream().map(ComponentBean::new).collect(toList());</span>
 	}

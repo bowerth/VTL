@@ -26,11 +26,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-import it.bancaditalia.oss.vtl.exceptions.VTLUnboundNameException;
+import it.bancaditalia.oss.vtl.exceptions.VTLUnboundAliasException;
 import it.bancaditalia.oss.vtl.spring.rest.exception.VTLInvalidSessionException;
 
 @ControllerAdvice
-<span class="nc" id="L33">public class VTLExceptionController</span>
+<span class="fc" id="L33">public class VTLExceptionController</span>
 {
 	@ExceptionHandler(value = ParseCancellationException.class)
 	public ResponseEntity&lt;Object&gt; exception(ParseCancellationException e)
@@ -38,8 +38,8 @@ import it.bancaditalia.oss.vtl.spring.rest.exception.VTLInvalidSessionException;
 <span class="nc" id="L38">		return new ResponseEntity&lt;&gt;(&quot;Syntax error: &quot; + e.getLocalizedMessage(), BAD_REQUEST);</span>
 	}
 
-	@ExceptionHandler(value = VTLUnboundNameException.class)
-	public ResponseEntity&lt;Object&gt; exception(VTLUnboundNameException e)
+	@ExceptionHandler(value = VTLUnboundAliasException.class)
+	public ResponseEntity&lt;Object&gt; exception(VTLUnboundAliasException e)
 	{
 <span class="nc" id="L44">		return new ResponseEntity&lt;&gt;(e.getLocalizedMessage(), BAD_REQUEST);</span>
 	}

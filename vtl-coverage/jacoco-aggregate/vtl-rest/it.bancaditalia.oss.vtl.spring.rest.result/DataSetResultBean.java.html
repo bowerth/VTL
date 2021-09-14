@@ -72,7 +72,7 @@ public class DataSetResultBean extends ResultBean
 	    	{
 <span class="nc" id="L73">	    		gen.writeStartObject();</span>
 	    		
-<span class="nc bnc" id="L75" title="All 2 branches missed.">		    	for (Entry&lt;DataStructureComponent&lt;?, ?, ?&gt;, ScalarValue&lt;?, ?, ?&gt;&gt; entry: dp.entrySet())</span>
+<span class="nc bnc" id="L75" title="All 2 branches missed.">		    	for (Entry&lt;DataStructureComponent&lt;?, ?, ?&gt;, ScalarValue&lt;?, ?, ?, ?&gt;&gt; entry: dp.entrySet())</span>
 		    	{
 <span class="nc" id="L77">		    		gen.writeFieldName(entry.getKey().getName());</span>
 <span class="nc" id="L78">		    		gen.writeRawValue(entry.getValue().toString());</span>

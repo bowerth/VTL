@@ -8,7 +8,7 @@
 <html  xml:lang="en" lang="en">
         <head>
     <meta charset="UTF-8" />
-    <title>Reactor Dependency Convergence | VTL Engine and Editor</title>
+    <title>Dependency Convergence | VTL Engine and Editor</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="" />
       <meta http-equiv="content-language" content="en" />
@@ -66,11 +66,6 @@
                                     <a href="team.html" title="Team"  class="dropdown-item ">Team</a>
                                 </div>
                             </div>
-                            <div class="dropdown-submenu">
-                                <a  href="project-reports.html"  title="Project Reports"  class="dropdown-item" >Project Reports</a>                                <div class="dropdown-menu">
-                                    <a href="apidocs/index.html" title="Javadoc"  class="dropdown-item ">Javadoc</a>
-                                </div>
-                            </div>
                         </div>
                     </li>
                 </ul><!--/ul.navbar-nav -->
@@ -103,27 +98,41 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a  href="."  title="VTL E&E"  class="" >VTL E&E</a></li>
-            <li class="breadcrumb-item active">Reactor Dependency Convergence</li>
+            <li class="breadcrumb-item active">Dependency Convergence</li>
         </ol>
     </nav>
         <section> 
- <h2 id="Reactor_Dependency_Convergence">Reactor Dependency Convergence</h2> 
+ <h2 id="Dependency_Convergence">Dependency Convergence</h2> 
+ <table border="0" class="bodyTable table table-striped table-hover"> 
+  <caption> 
+   <b>Legend:</b> 
+  </caption> 
+  <tbody> 
+   <tr class="a"> 
+    <td> 
+     <figure> 
+      <figcaption>
+        [Error] 
+      </figcaption> 
+      <i class="fas fa-exclamation-circle"></i> 
+     </figure></td> 
+    <td>At least one dependency has a differing version of the dependency or has SNAPSHOT dependencies.</td> 
+   </tr> 
+  </tbody> 
+ </table> 
+ <br> 
  <table border="0" class="bodyTable table table-striped table-hover"> 
   <caption> 
    <b>Statistics:</b> 
   </caption> 
   <tbody> 
-   <tr class="a"> 
-    <th>Number of modules:</th> 
-    <td>20</td> 
-   </tr> 
    <tr class="b"> 
     <th>Number of dependencies (NOD):</th> 
-    <td>270</td> 
+    <td>0</td> 
    </tr> 
    <tr class="a"> 
     <th>Number of unique artifacts (NOA):</th> 
-    <td>270</td> 
+    <td>0</td> 
    </tr> 
    <tr class="b"> 
     <th>Number of version-conflicting artifacts (NOC):</th> 
@@ -138,23 +147,26 @@
     <td> 
      <figure> 
       <figcaption>
-        [Success] 
+        [Error] 
       </figcaption> 
-      <i class="fas fa-check-circle"></i> 
-     </figure>&nbsp;<b>100 %</b></td> 
+      <i class="fas fa-exclamation-circle"></i> 
+     </figure>&nbsp;<b>0 %</b></td> 
    </tr> 
    <tr class="a"> 
     <th>Ready for release (100% convergence and no SNAPSHOTS):</th> 
     <td> 
      <figure> 
       <figcaption>
-        [Success] 
+        [Error] 
       </figcaption> 
-      <i class="fas fa-check-circle"></i> 
-     </figure>&nbsp;<b>Success</b></td> 
+      <i class="fas fa-exclamation-circle"></i> 
+     </figure>&nbsp;<b>Error</b><br>You do not have 100% convergence.</td> 
    </tr> 
   </tbody> 
  </table> 
+</section> 
+<section> 
+ <h3 id="Dependencies_used_in_this_project">Dependencies used in this project</h3> 
 </section>        </main>
         <div class="d-none d-sm-none d-md-none d-lg-none d-xl-block col-xl-2">
         </div>
@@ -211,7 +223,6 @@ Maven Documentation
                     <li class="nav-item "><a  href="team.html"  title="Team"  class="nav-link" >Team</a></li>
         </ul>
 </li>
-                                <li class="nav-item "><a  href="project-reports.html"  title="Project Reports"  class="nav-link" >Project Reports <i class="fas fa-angle-right"></i></a></li>
                 </ul>
             </div>
             <div class="col bottom-description">
@@ -236,7 +247,7 @@ Maven Documentation
                  <a href="https://www.bancaditalia.it">Banca D'Italia</a>
 . All Rights Reserved.</p>
         <p class="version-date">
-<span class="projectVersion">Version: 1.0.8-SNAPSHOT. </span>        </p>
+<span class="projectVersion">Version: 1.0.8. </span>        </p>
         <p><a href="https://github.com/devacfr/reflow-maven-skin" title="Reflow Maven skin">Reflow Maven skin</a> by <a href="http://devacfr.github.io" target="_blank" title="devacfr">devacfr</a>.</p>
       </div>
     </div>

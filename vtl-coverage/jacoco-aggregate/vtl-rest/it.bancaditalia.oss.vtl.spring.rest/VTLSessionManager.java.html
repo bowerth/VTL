@@ -34,30 +34,30 @@ import it.bancaditalia.oss.vtl.session.VTLSession;
 
 @Service
 @SessionScope
-<span class="nc" id="L37">public class VTLSessionManager</span>
+<span class="fc" id="L37">public class VTLSessionManager</span>
 {
-<span class="nc" id="L39">	private static final Logger LOGGER = LoggerFactory.getLogger(VTLSessionManager.class);</span>
+<span class="fc" id="L39">	private static final Logger LOGGER = LoggerFactory.getLogger(VTLSessionManager.class);</span>
 	
 	@Autowired private HttpSession httpSession;
 
 	public UUID createSession()
 	{
-<span class="nc" id="L45">		UUID uuid = UUID.randomUUID();</span>
-<span class="nc" id="L46">		httpSession.setAttribute(uuid.toString(), ConfigurationManager.getDefault().createSession());</span>
-<span class="nc" id="L47">		LOGGER.info(&quot;Created session with UUID {}&quot;, uuid);</span>
-<span class="nc" id="L48">		return uuid;</span>
+<span class="fc" id="L45">		UUID uuid = UUID.randomUUID();</span>
+<span class="fc" id="L46">		httpSession.setAttribute(uuid.toString(), ConfigurationManager.getDefault().createSession());</span>
+<span class="fc" id="L47">		LOGGER.info(&quot;Created session with UUID {}&quot;, uuid);</span>
+<span class="fc" id="L48">		return uuid;</span>
 	}
 
 	public VTLSession getSession(UUID uuid)
 	{
-<span class="nc" id="L53">		LOGGER.info(&quot;Requested session with UUID {}&quot;, uuid);</span>
-<span class="nc" id="L54">		return (VTLSession) httpSession.getAttribute(uuid.toString());</span>
+<span class="fc" id="L53">		LOGGER.info(&quot;Requested session with UUID {}&quot;, uuid);</span>
+<span class="fc" id="L54">		return (VTLSession) httpSession.getAttribute(uuid.toString());</span>
 	}
 
 	public boolean containsSession(UUID uuid)
 	{
-<span class="nc" id="L59">		LOGGER.info(&quot;Requested session with UUID {}&quot;, uuid);</span>
-<span class="nc bnc" id="L60" title="All 2 branches missed.">		return httpSession.getAttribute(uuid.toString()) != null;</span>
+<span class="fc" id="L59">		LOGGER.info(&quot;Requested session with UUID {}&quot;, uuid);</span>
+<span class="pc bpc" id="L60" title="1 of 2 branches missed.">		return httpSession.getAttribute(uuid.toString()) != null;</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
